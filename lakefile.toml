@@ -23,7 +23,7 @@ git = "https://github.com/PatrickMassot/checkdecls.git"
 
 [[require]]
 name = "lean-atlas"
-path = "../lean-atlas"
+path = "../lean-atlas-for-PrimeNumberTheoremAnd"
 
 [[lean_lib]]
 name = "FLT"

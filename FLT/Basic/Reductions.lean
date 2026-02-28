@@ -1,4 +1,5 @@
 import FLT.GaloisRepresentation.HardlyRamified.Frey
+import LeanAtlas.Metadata.Attribute.Meta
 /-!
 
 # Preliminary reductions of FLT
@@ -65,7 +66,10 @@ theorem FreyPackage.false (P : FreyPackage) : False := by
   exact Mazur_Frey P
   -- Contradiction!
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
 /-- Fermat's Last Theorem is true -/
+@[formalMeta "Fermat's Last Theorem" "xⁿ + yⁿ = zⁿ has no positive integer solutions for n ≥ 3" mainTheorem]
 theorem Wiles_Taylor_Wiles : FermatLastTheorem := by
   -- Suppose Fermat's Last Theorem is false
   by_contra h

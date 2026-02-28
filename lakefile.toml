@@ -21,6 +21,10 @@ git = "https://github.com/leanprover-community/mathlib4.git"
 name = "checkdecls"
 git = "https://github.com/PatrickMassot/checkdecls.git"
 
+[[require]]
+name = "lean-atlas"
+path = "../lean-atlas"
+
 [[lean_lib]]
 name = "FLT"
 globs = ["FLT", "FermatsLastTheorem"]

@@ -519,4 +519,4 @@ name = "FLT.QuaternionAlgebra.NumberField"
 name = "FLT.TateCurve.TateCurve"
 
 [atlas]
-root = "../lean-atlas-for-PrimeNumberTheoremAnd"
+root = "../lean-atlas-for-FLT"

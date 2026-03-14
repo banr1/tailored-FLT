@@ -67,9 +67,9 @@ variable (RtoT : R₀ →+* T₀) (hRtoT : ∀ r (m : M₀), RtoT r • m = r �
 -- Then `R₀ →+* T₀` has nilpotent kernel.
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
-@[formalMeta "R = T theorem" "The kernel of the map R₀ → T₀ is nilpotent, establishing modularity via patching"]
 include F HCompat hfRₒₒ hfRₒₒ' H₀ H hRtoT in
 omit [IsNoetherianRing Rₒₒ] in
+@[formalMeta "R = T theorem" "The kernel of the map R₀ → T₀ is nilpotent, establishing modularity via patching"]
 theorem ker_RtoT_le_nilradical : RingHom.ker RtoT ≤ nilradical R₀ := by
   have : Module.Finite Λ M₀ := by
     cases isEmpty_or_nonempty ι

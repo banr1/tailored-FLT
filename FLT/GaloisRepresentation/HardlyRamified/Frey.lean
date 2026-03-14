@@ -1,5 +1,6 @@
 import FLT.GaloisRepresentation.HardlyRamified.Defs
 import FLT.Basic.FreyPackage
+import LeanAtlas.Metadata.Attribute.Meta
 
 variable (P : FreyPackage)
 
@@ -13,6 +14,9 @@ noncomputable local instance (p : ℕ) [Fact p.Prime] : Algebra ℤ_[p] (ZMod p)
 it is defined in a completely nonconstructive way, so we add the classical instance. -/
 noncomputable local instance : DecidableEq (AlgebraicClosure ℚ) := Classical.typeDecidableEq _
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
+@[formalMeta "Frey torsion is hardly ramified" "The p-torsion Galois representation of the Frey curve is hardly ramified"]
 theorem FreyCurve.torsion_isHardlyRamified :
     haveI : Fact (P.p.Prime) := ⟨P.pp⟩
     IsHardlyRamified P.hp_odd sorry

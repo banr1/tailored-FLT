@@ -1,4 +1,5 @@
 import FLT.Patching.System
+import LeanAtlas.Metadata.Attribute.Meta
 
 open IsLocalRing Module.UniformlyBoundedRank
 attribute [local instance] Module.quotientAnnihilator
@@ -64,6 +65,9 @@ variable {T₀ : Type*} [Ring T₀] [Module T₀ M₀]
 variable (RtoT : R₀ →+* T₀) (hRtoT : ∀ r (m : M₀), RtoT r • m = r • m)
 
 -- Then `R₀ →+* T₀` has nilpotent kernel.
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
+@[formalMeta "R = T theorem" "The kernel of the map R₀ → T₀ is nilpotent, establishing modularity via patching"]
 include F HCompat hfRₒₒ hfRₒₒ' H₀ H hRtoT in
 omit [IsNoetherianRing Rₒₒ] in
 theorem ker_RtoT_le_nilradical : RingHom.ker RtoT ≤ nilradical R₀ := by

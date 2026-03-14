@@ -1,5 +1,6 @@
 import FLT.GaloisRepresentation.HardlyRamified.Defs
 import FLT.Deformations.RepresentationTheory.GaloisRepFamily
+import LeanAtlas.Metadata.Attribute.Meta
 
 namespace GaloisRepresentation.IsHardlyRamified
 
@@ -18,6 +19,9 @@ variable {p : ℕ} (hpodd : Odd p) [hp : Fact p.Prime]
     {V : Type v} [AddCommGroup V] [Module R V] [Module.Finite R V]
     [Module.Free R V] (hv : Module.rank R V = 2) {ρ : GaloisRep ℚ R V}
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
+@[formalMeta "Compatible families of Galois representations" "A p-adic hardly ramified representation belongs to a compatible family of Galois representations"]
 theorem mem_isCompatible (hρ : IsHardlyRamified hpodd hv ρ) :
     -- Then `ρ` lives in a compatible family of Galois representations
     -- i.e., there's a family σ of 2-dimensional representations of Γ_ℚ

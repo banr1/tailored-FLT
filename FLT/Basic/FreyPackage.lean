@@ -8,6 +8,7 @@ import Mathlib.RepresentationTheory.Basic
 import Mathlib.RingTheory.SimpleModule.Basic
 import Mathlib.Tactic.ModCases
 import FLT.EllipticCurve.Torsion
+import LeanAtlas.Metadata.Attribute.Meta
 
 /-!
 
@@ -208,7 +209,10 @@ lemma of_not_FermatLastTheorem_p_ge_5 {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0
     hb2 := (ZMod.intCast_zmod_eq_zero_iff_dvd ..).2 (even_iff_two_dvd.1 eb)
   }⟩
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
 /-- If Fermat's Last Theorem is false, then there exists a Frey Package. -/
+@[formalMeta "Reduction to Frey Package" "If Fermat's Last Theorem is false, then there exists a Frey package"]
 lemma of_not_FermatLastTheorem (h : ¬ FermatLastTheorem) : Nonempty (FreyPackage) := by
   contrapose! h
   refine FermatLastTheorem.of_p_ge_5

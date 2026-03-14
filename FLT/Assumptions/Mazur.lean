@@ -1,5 +1,6 @@
 import Mathlib.GroupTheory.Torsion
 import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+import LeanAtlas.Metadata.Attribute.Meta
 
 /-!
 
@@ -91,7 +92,10 @@ open scoped WeierstrassCurve.Affine -- E⟮ℚ⟯ notation
 -- that the torsion subgroup is finite, so the axiom as stated will suffice
 -- for the application to FLT.
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
 /-- Mazur's bound for the size of the torsion subgroup of an elliptic curve
 over the rationals . -/
+@[formalMeta "Mazur's Torsion Theorem" "The torsion subgroup of any elliptic curve over ℚ has at most 16 elements"]
 axiom Mazur_statement (E : WeierstrassCurve ℚ) [E.IsElliptic] :
     (AddCommGroup.torsion E⟮ℚ⟯ : Set E⟮ℚ⟯).ncard ≤ 16

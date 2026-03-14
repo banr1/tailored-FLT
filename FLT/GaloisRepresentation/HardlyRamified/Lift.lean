@@ -1,4 +1,5 @@
 import FLT.GaloisRepresentation.HardlyRamified.Defs
+import LeanAtlas.Metadata.Attribute.Meta
 
 namespace GaloisRepresentation.IsHardlyRamified
 
@@ -14,9 +15,12 @@ variable {k : Type u} [Finite k] [Field k]
 
 open TensorProduct
 
+set_option linter.style.whitespace false in
+set_option linter.style.longLine false in
 /--
 An irreducible mod p hardly ramified representation lifts to a p-adic one.
 -/
+@[formalMeta "Lifting of hardly ramified representations" "An irreducible mod p hardly ramified representation lifts to a p-adic one"]
 theorem lifts (ρ : GaloisRep ℚ k V) (hρirred : ρ.IsIrreducible)
     (hρ : IsHardlyRamified hpodd hV ρ) :
     ∃ (R : Type u) (_ : CommRing R) (_ : IsLocalRing R)

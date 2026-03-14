@@ -21,7 +21,7 @@ variable {p : ℕ} (hpodd : Odd p) [hp : Fact p.Prime]
 
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
-@[formalMeta "Compatible families of Galois representations" "A p-adic hardly ramified representation belongs to a compatible family of Galois representations"]
+@[formalMeta "Compatible families of Galois representations" "A p-adic hardly ramified representation belongs to a compatible family of Galois representations" mainTheorem]
 theorem mem_isCompatible (hρ : IsHardlyRamified hpodd hv ρ) :
     -- Then `ρ` lives in a compatible family of Galois representations
     -- i.e., there's a family σ of 2-dimensional representations of Γ_ℚ

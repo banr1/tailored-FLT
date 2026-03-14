@@ -212,7 +212,7 @@ lemma of_not_FermatLastTheorem_p_ge_5 {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
 /-- If Fermat's Last Theorem is false, then there exists a Frey Package. -/
-@[formalMeta "Reduction to Frey Package" "If Fermat's Last Theorem is false, then there exists a Frey package"]
+@[formalMeta "Reduction to Frey Package" "If Fermat's Last Theorem is false, then there exists a Frey package" mainTheorem]
 lemma of_not_FermatLastTheorem (h : ¬ FermatLastTheorem) : Nonempty (FreyPackage) := by
   contrapose! h
   refine FermatLastTheorem.of_p_ge_5

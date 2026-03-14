@@ -16,7 +16,7 @@ noncomputable local instance : DecidableEq (AlgebraicClosure ℚ) := Classical.t
 
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
-@[formalMeta "Frey torsion is hardly ramified" "The p-torsion Galois representation of the Frey curve is hardly ramified"]
+@[formalMeta "Frey torsion is hardly ramified" "The p-torsion Galois representation of the Frey curve is hardly ramified" mainTheorem]
 theorem FreyCurve.torsion_isHardlyRamified :
     haveI : Fact (P.p.Prime) := ⟨P.pp⟩
     IsHardlyRamified P.hp_odd sorry

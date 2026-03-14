@@ -69,7 +69,7 @@ set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
 include F HCompat hfRₒₒ hfRₒₒ' H₀ H hRtoT in
 omit [IsNoetherianRing Rₒₒ] in
-@[formalMeta "R = T theorem" "The kernel of the map R₀ → T₀ is nilpotent, establishing modularity via patching"]
+@[formalMeta "R = T theorem" "The kernel of the map R₀ → T₀ is nilpotent, establishing modularity via patching" mainTheorem]
 theorem ker_RtoT_le_nilradical : RingHom.ker RtoT ≤ nilradical R₀ := by
   have : Module.Finite Λ M₀ := by
     cases isEmpty_or_nonempty ι

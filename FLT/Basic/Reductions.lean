@@ -35,7 +35,7 @@ open WeierstrassCurve
 
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
-@[formalMeta "Irreducibility of Frey p-torsion (Mazur)" "The p-torsion Galois representation of the Frey curve is irreducible, by Mazur's theorem"]
+@[formalMeta "Irreducibility of Frey p-torsion (Mazur)" "The p-torsion Galois representation of the Frey curve is irreducible, by Mazur's theorem" mainTheorem]
 theorem Mazur_Frey (P : FreyPackage) :
     haveI : Fact P.p.Prime := ⟨P.pp⟩
     GaloisRep.IsIrreducible (P.freyCurve.galoisRep P.p P.hppos) :=
@@ -50,7 +50,7 @@ But it follows from a profound theorem of Ribet, and the even more profound theo
 
 set_option linter.style.whitespace false in
 set_option linter.style.longLine false in
-@[formalMeta "Reducibility of Frey p-torsion (Wiles/Ribet)" "The p-torsion Galois representation of the Frey curve is NOT irreducible, by Wiles/Ribet"]
+@[formalMeta "Reducibility of Frey p-torsion (Wiles/Ribet)" "The p-torsion Galois representation of the Frey curve is NOT irreducible, by Wiles/Ribet" mainTheorem]
 theorem Wiles_Frey (P : FreyPackage) :
     haveI : Fact P.p.Prime := ⟨P.pp⟩
     ¬ GaloisRep.IsIrreducible (P.freyCurve.galoisRep P.p P.hppos) :=
@@ -67,7 +67,7 @@ set_option linter.style.longLine false in
 /-- There is no Frey package. This profound result is proved using
 work of Mazur and Wiles/Ribet to rule out all possibilities for the
 $p$-torsion in the corresponding Frey curve. -/
-@[formalMeta "Non-existence of Frey Package" "No Frey package exists, by combining Mazur's irreducibility and Wiles/Ribet's reducibility"]
+@[formalMeta "Non-existence of Frey Package" "No Frey package exists, by combining Mazur's irreducibility and Wiles/Ribet's reducibility" mainTheorem]
 theorem FreyPackage.false (P : FreyPackage) : False := by
   -- by Wiles' result, the p-torsion is not irreducible
   apply Wiles_Frey P

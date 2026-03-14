@@ -20,7 +20,7 @@ set_option linter.style.longLine false in
 /--
 An irreducible mod p hardly ramified representation lifts to a p-adic one.
 -/
-@[formalMeta "Lifting of hardly ramified representations" "An irreducible mod p hardly ramified representation lifts to a p-adic one"]
+@[formalMeta "Lifting of hardly ramified representations" "An irreducible mod p hardly ramified representation lifts to a p-adic one" mainTheorem]
 theorem lifts (ρ : GaloisRep ℚ k V) (hρirred : ρ.IsIrreducible)
     (hρ : IsHardlyRamified hpodd hV ρ) :
     ∃ (R : Type u) (_ : CommRing R) (_ : IsLocalRing R)

@@ -23,6 +23,12 @@ rev = "08fe4f24e3d818cf86b5615fdc9cbc5257480a39"
 name = "checkdecls"
 git = "https://github.com/PatrickMassot/checkdecls.git"
 
+[[require]]
+name = "lean-atlas"
+scope = "NyxFoundation"
+git = "https://github.com/NyxFoundation/lean-atlas"
+rev = "main"
+
 [[lean_lib]]
 name = "FLT"
 globs = ["FLT", "FermatsLastTheorem"]

@@ -8,7 +8,6 @@ module
 public import FLT.Basic.FreyPackage
 public import FLT.EllipticCurve.Torsion
 import FLT.GaloisRepresentation.HardlyRamified.Frey
-import LeanAtlas
 import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
 import Mathlib.Data.Nat.Factorial.DoubleFactorial
 import Mathlib.NumberTheory.ArithmeticFunction.Misc
@@ -81,7 +80,6 @@ theorem FreyPackage.false (P : FreyPackage) : False := by
   -- Contradiction!
 
 /-- Fermat's Last Theorem is true -/
-@[formalMeta "Wiles_Taylor_Wiles" "Fermat's Last Theorem" mainTheorem]
 theorem Wiles_Taylor_Wiles : FermatLastTheorem := by
   -- Suppose Fermat's Last Theorem is false
   by_contra h
